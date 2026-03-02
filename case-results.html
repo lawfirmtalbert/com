@@ -1,0 +1,1269 @@
+<!-- ============================================
+     case-results.html - Notable Victories & Settlements
+     ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Case Results · Talbert Legal Partners</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ===== PREMIUM DESIGN SYSTEM (MATCHING INDEX.HTML) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #0a192f;
+            --primary-rich: #1e3a5f;
+            --primary-accent: #2b5b8c;
+            --secondary-gold: #c6a15b;
+            --secondary-gold-light: #dbb67b;
+            --secondary-burgundy: #8b3a3a;
+            --neutral-white: #ffffff;
+            --neutral-ivory: #faf7f2;
+            --neutral-cream: #f5efe6;
+            --neutral-light: #e9e4da;
+            --neutral-mid: #b6aba0;
+            --neutral-dark: #2c2c2c;
+            --gradient-premium: linear-gradient(165deg, #0a192f 0%, #1e3a5f 50%, #2b5b8c 100%);
+            --gradient-gold: linear-gradient(135deg, #c6a15b 0%, #dbb67b 50%, #c6a15b 100%);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --shadow-gold: 0 10px 30px rgba(198, 161, 91, 0.2);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --radius: 12px;
+            --radius-full: 50px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--neutral-dark);
+            background: var(--neutral-ivory);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--primary-deep);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            width: 100%;
+        }
+
+        /* ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(198, 161, 91, 0.15);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: var(--font-serif);
+            color: var(--primary-deep);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .logo-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .logo-text {
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-deep);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-gold);
+            color: var(--primary-deep) !important;
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(198, 161, 91, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary-deep);
+        }
+
+        /* ===== PAGE HEADER (MATCHING HERO STYLE) ===== */
+        .page-header {
+            position: relative;
+            padding: 180px 0 100px;
+            margin-top: 0;
+            isolation: isolate;
+            overflow: hidden;
+            background: var(--gradient-premium);
+        }
+
+        .page-header-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .page-header-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.90;
+            animation: zoomEffect 20s ease infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .page-header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(10, 25, 47, 0.95) 0%, rgba(30, 58, 95, 0.85) 100%);
+            z-index: -1;
+        }
+
+        .page-header-content {
+            max-width: 900px;
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .page-header-subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .page-header h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-header p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ===== PREMIUM SECTION STYLES ===== */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--secondary-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-gold);
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 30px auto 0;
+            color: var(--neutral-mid);
+            font-size: 1.1rem;
+        }
+
+        /* ===== RESULTS SUMMARY ===== */
+        .results-summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 60px 0;
+            background: white;
+            position: relative;
+        }
+
+        .summary-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(198, 161, 91, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-gold);
+        }
+
+        .summary-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .summary-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            font-family: var(--font-serif);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .summary-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-deep);
+            font-weight: 600;
+        }
+
+        /* ===== FEATURED CASE ===== */
+        .featured-case {
+            background: var(--neutral-cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-case::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: var(--secondary-gold);
+            opacity: 0.05;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            padding: 8px 25px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .featured-content h2 {
+            font-size: 3.2rem;
+            color: var(--primary-deep);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .featured-content p {
+            font-size: 1.1rem;
+            color: var(--neutral-mid);
+            margin-bottom: 30px;
+        }
+
+        .featured-amount {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            font-family: var(--font-serif);
+            margin: 30px 0 20px;
+            line-height: 1;
+            text-shadow: 2px 2px 10px rgba(198, 161, 91, 0.2);
+        }
+
+        .featured-details {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--secondary-gold);
+            box-shadow: var(--shadow-md);
+        }
+
+        .featured-details p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary-deep);
+        }
+
+        .featured-details i {
+            color: var(--secondary-gold);
+            width: 24px;
+            font-size: 1.2rem;
+        }
+
+        .featured-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 550px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .featured-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .featured-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(10, 25, 47, 0.5), transparent);
+            pointer-events: none;
+        }
+
+        /* ===== FILTER BAR ===== */
+        .results-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 14px 32px;
+            border: 2px solid var(--secondary-gold);
+            background: transparent;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-deep);
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-gold);
+            border-color: transparent;
+            color: var(--primary-deep);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ===== CASE CARDS ===== */
+        .case-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(198, 161, 91, 0.1);
+            position: relative;
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+            z-index: 1;
+        }
+
+        .case-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-gold);
+        }
+
+        .case-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .case-card-header {
+            background: var(--gradient-premium);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        .case-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-serif);
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .case-type {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            padding: 6px 18px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .case-card-body {
+            padding: 30px;
+        }
+
+        .case-card-body h3 {
+            font-size: 1.4rem;
+            color: var(--primary-deep);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .case-card-body p {
+            color: var(--neutral-mid);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--neutral-light);
+        }
+
+        .case-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .case-meta i {
+            color: var(--secondary-gold);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 42px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(198, 161, 91, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary-gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-deep);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-family: var(--font-serif);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary-gold);
+        }
+
+        .footer-links h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .results-summary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-header h1 {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: var(--shadow-lg);
+                border-top: 1px solid var(--neutral-light);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 3rem;
+            }
+
+            .page-header p {
+                font-size: 1.2rem;
+            }
+
+            .results-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .case-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-amount {
+                font-size: 3rem;
+            }
+
+            .featured-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .filter-bar {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .case-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Talbert</span><span class="logo-dot"></span><span
+                    class="logo-text">Partners</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="practice-areas.html">Practice</a></li>
+                    <li><a href="attorneys.html">Attorneys</a></li>
+                    <li><a href="case-results.html" class="active">Results</a></li>
+                    <li><a href="blog.html">Insights</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="nav-cta">Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER (MATCHING HERO STYLE) ===== -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1411&auto=format&fit=crop"
+                alt="Case Results">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="page-header-subtitle">Proven Track Record</div>
+                <h1>Notable Results</h1>
+                <p>A track record of exceptional outcomes for our clients</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS SUMMARY ===== -->
+    <div class="container">
+        <div class="results-summary">
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="summary-number">$3.2B+</div>
+                <div class="summary-label">Total Recovered</div>
+            </div>
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="summary-number">247</div>
+                <div class="summary-label">Trials Won</div>
+            </div>
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="summary-number">89%</div>
+                <div class="summary-label">Favorable Verdicts</div>
+            </div>
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="summary-number">1500+</div>
+                <div class="summary-label">Cases Resolved</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FEATURED CASE ===== -->
+    <section class="featured-case">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-content" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="featured-badge">Record-Breaking Victory</span>
+                    <h2>Landmark Securities Fraud Settlement</h2>
+                    <p>In one of the largest securities class action settlements in history, Talbert Legal Partners
+                        secured a $1.2 billion recovery for institutional investors against a multinational financial
+                        institution. The case, litigated over four years, established new precedents for financial
+                        disclosure requirements.</p>
+                    <div class="featured-amount">$1.2 Billion</div>
+                    <div class="featured-details">
+                        <p><i class="fas fa-briefcase"></i> <strong>Practice Area:</strong> Securities Litigation</p>
+                        <p><i class="fas fa-user"></i> <strong>Lead Attorney:</strong> James A. Talbert</p>
+                        <p><i class="fas fa-calendar"></i> <strong>Year:</strong> 2023</p>
+                    </div>
+                </div>
+                <div class="featured-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Courtroom victory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESULTS GRID ===== -->
+    <section class="results-grid">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-subtitle">Case Highlights</div>
+                <h2>Recent Victories</h2>
+                <p class="section-description">A selection of our most significant recent outcomes</p>
+            </div>
+
+            <div class="results-filter" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="all">All Results</button>
+                <button class="filter-btn" data-filter="litigation">Litigation</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="ip">Intellectual Property</button>
+                <button class="filter-btn" data-filter="regulatory">Regulatory</button>
+            </div>
+
+            <div class="case-cards" id="caseCards">
+                <!-- Case 1 -->
+                <div class="case-card" data-category="litigation" data-aos="fade-up" data-aos-delay="100">
+                    <div class="case-card-header">
+                        <div class="case-amount">$892M</div>
+                        <div class="case-type">Litigation</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Pharmaceutical Antitrust</h3>
+                        <p>Secured $892 million settlement for class of consumers in price-fixing litigation against
+                            major pharmaceutical manufacturers.</p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2025</span>
+                            <span><i class="fas fa-user"></i> M. Rodriguez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="case-card" data-category="corporate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="case-card-header">
+                        <div class="case-amount">$750M</div>
+                        <div class="case-type">Corporate</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Tech Merger Defense</h3>
+                        <p>Successfully defended $750M merger against DOJ challenge, securing clearance for two leading
+                            software companies.</p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-user"></i> R. Williams</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="case-card" data-category="ip" data-aos="fade-up" data-aos-delay="300">
+                    <div class="case-card-header">
+                        <div class="case-amount">$425M</div>
+                        <div class="case-type">Intellectual Property</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Patent Infringement</h3>
+                        <p>Jury verdict of $425M for biotechnology client in patent infringement case against
+                            multinational competitor.</p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-user"></i> S. Chen</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="case-card" data-category="regulatory" data-aos="fade-up" data-aos-delay="400">
+                    <div class="case-card-header">
+                        <div class="case-amount">$310M</div>
+                        <div class="case-type">Regulatory</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>FCPA Investigation</h3>
+                        <p>Resolved multi-jurisdiction FCPA investigation with no charges, saving client from potential
+                            $310M in penalties.</p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2024</span>
+                            <span><i class="fas fa-user"></i> J. Talbert</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 5 -->
+                <div class="case-card" data-category="litigation" data-aos="fade-up" data-aos-delay="500">
+                    <div class="case-card-header">
+                        <div class="case-amount">$275M</div>
+                        <div class="case-type">Litigation</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Contract Dispute</h3>
+                        <p>Obtained $275M arbitration award for energy company in breach of contract case against joint
+                            venture partner.</p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2022</span>
+                            <span><i class="fas fa-user"></i> M. Rodriguez</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 6 -->
+                <div class="case-card" data-category="corporate" data-aos="fade-up" data-aos-delay="600">
+                    <div class="case-card-header">
+                        <div class="case-amount">$200M</div>
+                        <div class="case-type">Corporate</div>
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Shareholder Derivative</h3>
+                        <p>Defeated $200M shareholder derivative lawsuit, obtaining complete dismissal with prejudice.
+                        </p>
+                        <div class="case-meta">
+                            <span><i class="fas fa-calendar"></i> 2023</span>
+                            <span><i class="fas fa-user"></i> R. Williams</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Ready to Build Your Success Story?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Let our track record work for you</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Free
+                    Consultation</a>
+                <a href="practice-areas.html" class="btn btn-outline"><i class="fas fa-briefcase"></i> Our Expertise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (EXACTLY FROM INDEX) ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Talbert<span>✦</span>Partners</div>
+                    <p>Where legal excellence meets strategic innovation. Since 1984.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="attorneys.html">Our Team</a></li>
+                        <li><a href="case-results.html">Case Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Legal Insights</a></li>
+                        <li><a href="resources.html">Downloads</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Offices</a></li>
+                        <li><a href="contact.html">Consultation</a></li>
+                        <li><a href="tel:+2128675309">(212) 867-5309</a></li>
+                        <li><a href="mailto:strategy@talbertpartners.top">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Talbert Legal Partners LLP. Attorney advertising. Prior results do not guarantee similar
+                    outcomes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle')?.addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const caseCards = document.querySelectorAll('.case-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter cards
+                const filter = button.dataset.filter;
+                caseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        // Add animation
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1114 @@
+<!-- ============================================
+     attorneys.html - Full Attorney Profiles
+     ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Our Attorneys · Talbert Legal Partners</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ===== PREMIUM DESIGN SYSTEM (MATCHING INDEX.HTML) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #0a192f;
+            --primary-rich: #1e3a5f;
+            --primary-accent: #2b5b8c;
+            --secondary-gold: #c6a15b;
+            --secondary-gold-light: #dbb67b;
+            --secondary-burgundy: #8b3a3a;
+            --neutral-white: #ffffff;
+            --neutral-ivory: #faf7f2;
+            --neutral-cream: #f5efe6;
+            --neutral-light: #e9e4da;
+            --neutral-mid: #b6aba0;
+            --neutral-dark: #2c2c2c;
+            --gradient-premium: linear-gradient(165deg, #0a192f 0%, #1e3a5f 50%, #2b5b8c 100%);
+            --gradient-gold: linear-gradient(135deg, #c6a15b 0%, #dbb67b 50%, #c6a15b 100%);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --shadow-gold: 0 10px 30px rgba(198, 161, 91, 0.2);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --radius: 12px;
+            --radius-full: 50px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--neutral-dark);
+            background: var(--neutral-ivory);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--primary-deep);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            width: 100%;
+        }
+
+        /* ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(198, 161, 91, 0.15);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: var(--font-serif);
+            color: var(--primary-deep);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .logo-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .logo-text {
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-deep);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-gold);
+            color: var(--primary-deep) !important;
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(198, 161, 91, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary-deep);
+        }
+
+        /* ===== PAGE HEADER (MATCHING HERO STYLE) ===== */
+        .page-header {
+            position: relative;
+            padding: 180px 0 100px;
+            margin-top: 0;
+            isolation: isolate;
+            overflow: hidden;
+            background: var(--gradient-premium);
+        }
+
+        .page-header-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .page-header-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.90;
+            animation: zoomEffect 20s ease infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .page-header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(10, 25, 47, 0.95) 0%, rgba(30, 58, 95, 0.85) 100%);
+            z-index: -1;
+        }
+
+        .page-header-content {
+            max-width: 900px;
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .page-header-subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .page-header h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-header p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ===== PREMIUM SECTION STYLES ===== */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--secondary-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-gold);
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 30px auto 0;
+            color: var(--neutral-mid);
+            font-size: 1.1rem;
+        }
+
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 50px 0 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 14px 32px;
+            border: 2px solid var(--secondary-gold);
+            background: transparent;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-deep);
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-gold);
+            border-color: transparent;
+            color: var(--primary-deep);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ===== ATTORNEY GRID ===== */
+        .attorney-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 20px 0 80px;
+        }
+
+        .attorney-profile-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(198, 161, 91, 0.1);
+        }
+
+        .attorney-profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+            z-index: 1;
+        }
+
+        .attorney-profile-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-gold);
+        }
+
+        .attorney-profile-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .attorney-profile-img {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .attorney-profile-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(10, 25, 47, 0.8), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .attorney-profile-card:hover .attorney-profile-img::after {
+            opacity: 1;
+        }
+
+        .attorney-profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.8s;
+        }
+
+        .attorney-profile-card:hover .attorney-profile-img img {
+            transform: scale(1.1);
+        }
+
+        .attorney-profile-info {
+            padding: 35px 30px;
+            position: relative;
+            background: white;
+        }
+
+        .attorney-profile-info h2 {
+            font-size: 2rem;
+            color: var(--primary-deep);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .attorney-title {
+            color: var(--secondary-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(198, 161, 91, 0.3);
+        }
+
+        .attorney-profile-info p {
+            color: var(--neutral-mid);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .attorney-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .specialty-tag {
+            background: var(--neutral-cream);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-accent);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .specialty-tag:hover {
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            transform: translateY(-2px);
+        }
+
+        .attorney-contact {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--neutral-light);
+        }
+
+        .attorney-contact p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--neutral-dark);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .attorney-contact p:hover {
+            transform: translateX(5px);
+            color: var(--secondary-gold);
+        }
+
+        .attorney-contact i {
+            color: var(--secondary-gold);
+            width: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 42px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(198, 161, 91, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary-gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-deep);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-family: var(--font-serif);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary-gold);
+        }
+
+        .footer-links h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .attorney-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-header h1 {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: var(--shadow-lg);
+                border-top: 1px solid var(--neutral-light);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 3rem;
+            }
+
+            .page-header p {
+                font-size: 1.2rem;
+            }
+
+            .attorney-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .filter-bar {
+                gap: 10px;
+            }
+
+            .filter-btn {
+                padding: 12px 24px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .attorney-profile-img {
+                height: 300px;
+            }
+
+            .attorney-profile-info {
+                padding: 25px 20px;
+            }
+
+            .attorney-profile-info h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Talbert</span><span class="logo-dot"></span><span
+                    class="logo-text">Partners</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="practice-areas.html">Practice</a></li>
+                    <li><a href="attorneys.html" class="active">Attorneys</a></li>
+                    <li><a href="case-results.html">Results</a></li>
+                    <li><a href="blog.html">Insights</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="nav-cta">Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER (MATCHING HERO STYLE) ===== -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1521791055368-0d5534721255?q=80&w=2069&auto=format&fit=crop"
+                alt="Legal Team">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="page-header-subtitle">Our Team</div>
+                <h1>Legal Visionaries</h1>
+                <p>Distinguished attorneys combining deep expertise with innovative approaches</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filter Buttons -->
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all">All Partners</button>
+            <button class="filter-btn" data-filter="partner">Partners</button>
+            <button class="filter-btn" data-filter="senior">Senior Counsel</button>
+            <button class="filter-btn" data-filter="associate">Associates</button>
+        </div>
+
+        <!-- Attorney Grid -->
+        <div class="attorney-grid" id="attorneyGrid">
+            <!-- Partner 1 -->
+            <div class="attorney-profile-card" data-category="partner" data-aos="fade-up" data-aos-delay="100">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/a/amm_mike_bio.jpg"
+                        alt="James Talbert">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>James A. Talbert</h2>
+                    <div class="attorney-title">Founding Partner</div>
+                    <p>Harvard Law School, J.D. | Yale University, B.A. Former federal prosecutor with 30+ years
+                        experience in complex litigation.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Complex Litigation</span>
+                        <span class="specialty-tag">Corporate Strategy</span>
+                        <span class="specialty-tag">White Collar Defense</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> jtalbert@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5301</p>
+                        <p><i class="fas fa-university"></i> Bar: NY, DC, Supreme Court</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner 2 -->
+            <div class="attorney-profile-card" data-category="partner" data-aos="fade-up" data-aos-delay="200">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/bio/abcde/a/aguilar_karen_bio.jpg"
+                        alt="Jennifer Talbert">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>Jennifer M. Talbert</h2>
+                    <div class="attorney-title">Senior Partner</div>
+                    <p>University of Chicago Law School, J.D. | Stanford University, B.S. Expert in corporate governance
+                        and executive compensation.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Estate Planning</span>
+                        <span class="specialty-tag">Probate Law</span>
+                        <span class="specialty-tag">Family Offices</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> jtalbert@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5302</p>
+                        <p><i class="fas fa-university"></i> Bar: NY, CT, FL</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner 3 -->
+            <div class="attorney-profile-card" data-category="partner" data-aos="fade-up" data-aos-delay="300">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/a/armstrong_adam_bio.jpg"
+                        alt="Robert Williams">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>Robert K. Williams</h2>
+                    <div class="attorney-title">Senior Partner</div>
+                    <p>Columbia Law School, J.D. | Princeton University, A.B. Recognized leader in probate, estate
+                        administration, and family wealth preservation.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Corporate Governance</span>
+                        <span class="specialty-tag">Executive Compensation</span>
+                        <span class="specialty-tag">M&A</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> rwilliams@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5303</p>
+                        <p><i class="fas fa-university"></i> Bar: OR, IL, DE</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Senior Counsel 1 -->
+            <div class="attorney-profile-card" data-category="senior" data-aos="fade-up" data-aos-delay="400">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/bio/abcde/a/angelus_matthew_bio.jpg"
+                        alt="Marcus Rodriguez">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>Marcus J. Rodriguez</h2>
+                    <div class="attorney-title">Senior Counsel</div>
+                    <p>NYU School of Law, J.D. | Georgetown University, B.S. Former SEC enforcement attorney
+                        specializing in financial services regulation.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Financial Regulation</span>
+                        <span class="specialty-tag">SEC Enforcement</span>
+                        <span class="specialty-tag">FinTech</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> mrodriguez@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5304</p>
+                        <p><i class="fas fa-university"></i> Bar: NY, DC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Associate 1 -->
+            <div class="attorney-profile-card" data-category="associate" data-aos="fade-up" data-aos-delay="500">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/b/bailey_rose_bio.jpg"
+                        alt="Sarah Chen">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>Sarah K. Chen</h2>
+                    <div class="attorney-title">Associate</div>
+                    <p>UC Berkeley School of Law, J.D. | MIT, B.S. Technology and intellectual property specialist with
+                        engineering background.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Patent Prosecution</span>
+                        <span class="specialty-tag">IP Litigation</span>
+                        <span class="specialty-tag">Technology Transactions</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> schen@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5305</p>
+                        <p><i class="fas fa-university"></i> Bar: NY, CA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Associate 2 -->
+            <div class="attorney-profile-card" data-category="associate" data-aos="fade-up" data-aos-delay="600">
+                <div class="attorney-profile-img">
+                    <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/b/bain_mark_bio.jpg"
+                        alt="Michael Park">
+                </div>
+                <div class="attorney-profile-info">
+                    <h2>Michael J. Park</h2>
+                    <div class="attorney-title">Associate</div>
+                    <p>Northwestern Law School, J.D. | University of Michigan, B.A. Former judicial clerk focused on
+                        commercial litigation.</p>
+                    <div class="attorney-specialties">
+                        <span class="specialty-tag">Commercial Litigation</span>
+                        <span class="specialty-tag">Securities Litigation</span>
+                        <span class="specialty-tag">Internal Investigations</span>
+                    </div>
+                    <div class="attorney-contact">
+                        <p><i class="fas fa-envelope"></i> mpark@talbertpartners.top</p>
+                        <p><i class="fas fa-phone"></i> (212) 867-5306</p>
+                        <p><i class="fas fa-university"></i> Bar: NY, IL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Partner With Our Team</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation with our senior partners</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book
+                    Consultation</a>
+                <a href="practice-areas.html" class="btn btn-outline"><i class="fas fa-briefcase"></i> Our Practice
+                    Areas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (EXACTLY FROM INDEX) ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Talbert<span>✦</span>Partners</div>
+                    <p>Where legal excellence meets strategic innovation. Since 1984.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="attorneys.html">Our Team</a></li>
+                        <li><a href="case-results.html">Case Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Legal Insights</a></li>
+                        <li><a href="resources.html">Downloads</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Offices</a></li>
+                        <li><a href="contact.html">Consultation</a></li>
+                        <li><a href="tel:+2128675309">(212) 867-5309</a></li>
+                        <li><a href="mailto:strategy@talbertpartners.top">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Talbert Legal Partners LLP. Attorney advertising. Prior results do not guarantee similar
+                    outcomes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle')?.addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const attorneyCards = document.querySelectorAll('.attorney-profile-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // Filter cards
+                const filter = button.dataset.filter;
+                attorneyCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        // Add animation
+                        card.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

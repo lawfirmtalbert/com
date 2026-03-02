@@ -1,0 +1,1390 @@
+<!-- ============================================
+     about.html - Firm History, Mission & Values
+     ============================================ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>About Us · Talbert Legal Partners</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* ===== PREMIUM DESIGN SYSTEM (MATCHING INDEX.HTML) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-deep: #0a192f;
+            --primary-rich: #1e3a5f;
+            --primary-accent: #2b5b8c;
+            --secondary-gold: #c6a15b;
+            --secondary-gold-light: #dbb67b;
+            --secondary-burgundy: #8b3a3a;
+            --neutral-white: #ffffff;
+            --neutral-ivory: #faf7f2;
+            --neutral-cream: #f5efe6;
+            --neutral-light: #e9e4da;
+            --neutral-mid: #b6aba0;
+            --neutral-dark: #2c2c2c;
+            --gradient-premium: linear-gradient(165deg, #0a192f 0%, #1e3a5f 50%, #2b5b8c 100%);
+            --gradient-gold: linear-gradient(135deg, #c6a15b 0%, #dbb67b 50%, #c6a15b 100%);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.12);
+            --shadow-gold: 0 10px 30px rgba(198, 161, 91, 0.2);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --radius: 12px;
+            --radius-full: 50px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--neutral-dark);
+            background: var(--neutral-ivory);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--primary-deep);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            width: 100%;
+        }
+
+        /* ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(198, 161, 91, 0.15);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: var(--font-serif);
+            color: var(--primary-deep);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            position: relative;
+        }
+
+        .logo-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .logo-text {
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-deep);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-gold);
+            color: var(--primary-deep) !important;
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            box-shadow: var(--shadow-gold);
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(198, 161, 91, 0.3);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--primary-deep);
+        }
+
+        /* ===== PAGE HEADER (MATCHING HERO STYLE) ===== */
+        .page-header {
+            position: relative;
+            padding: 180px 0 100px;
+            margin-top: 0;
+            isolation: isolate;
+            overflow: hidden;
+            background: var(--gradient-premium);
+        }
+
+        .page-header-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+        .page-header-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.90;
+            animation: zoomEffect 20s ease infinite alternate;
+        }
+
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .page-header-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, rgba(10, 25, 47, 0.95) 0%, rgba(30, 58, 95, 0.85) 100%);
+            z-index: -1;
+        }
+
+        .page-header-content {
+            max-width: 900px;
+            color: white;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .page-header-subtitle {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .page-header h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-header p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ===== PREMIUM SECTION STYLES ===== */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--secondary-gold);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-gold);
+        }
+
+        .section-description {
+            max-width: 700px;
+            margin: 30px auto 0;
+            color: var(--neutral-mid);
+            font-size: 1.1rem;
+        }
+
+        /* ===== STORY SECTION ===== */
+        .story-section {
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: var(--secondary-gold);
+            opacity: 0.03;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .story-content h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .story-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-gold);
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--neutral-dark);
+        }
+
+        .story-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: var(--neutral-cream);
+            padding: 30px 20px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            font-family: var(--font-serif);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--primary-deep);
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .story-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--gradient-premium);
+            color: white;
+            padding: 30px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid var(--secondary-gold);
+        }
+
+        .story-badge .years {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .story-badge .text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== MISSION SECTION ===== */
+        .mission-section {
+            background: var(--neutral-cream);
+            position: relative;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 50px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(198, 161, 91, 0.1);
+        }
+
+        .mission-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-gold);
+        }
+
+        .mission-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .mission-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-premium);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.2rem;
+            transition: var(--transition);
+        }
+
+        .mission-card:hover .mission-icon {
+            transform: rotateY(180deg);
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+        }
+
+        .mission-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-deep);
+        }
+
+        .mission-card p {
+            color: var(--neutral-mid);
+        }
+
+        /* ===== TIMELINE SECTION ===== */
+        .timeline-section {
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: var(--secondary-gold);
+            opacity: 0.03;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 80px auto 0;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: var(--gradient-gold);
+            top: 0;
+            border-radius: var(--radius-full);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--neutral-cream);
+            padding: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary-gold);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--neutral-cream);
+            transform: rotate(45deg);
+            border: 1px solid rgba(198, 161, 91, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -10px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -10px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            padding: 12px 30px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-gold);
+            z-index: 2;
+            white-space: nowrap;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.6rem;
+            color: var(--primary-deep);
+            margin-bottom: 15px;
+        }
+
+        .timeline-content p {
+            color: var(--neutral-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* ===== LEADERSHIP SECTION ===== */
+        .leadership-section {
+            background: var(--gradient-premium);
+            color: white;
+        }
+
+        .leadership-section .section-header h2 {
+            color: white;
+        }
+
+        .leadership-section .section-header h2::after {
+            background: white;
+        }
+
+        .leadership-section .section-description {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .leader-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .leader-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-gold);
+        }
+
+        .leader-img {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-bottom: 3px solid var(--secondary-gold);
+        }
+
+        .leader-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .leader-card:hover .leader-img img {
+            transform: scale(1.1);
+        }
+
+        .leader-info {
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .leader-info h3 {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .leader-title {
+            color: var(--secondary-gold);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .leader-info p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(30, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1560264418-c4445382edbc?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 42px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--primary-deep);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(198, 161, 91, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--secondary-gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--primary-deep);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-family: var(--font-serif);
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary-gold);
+        }
+
+        .footer-links h4 {
+            color: var(--secondary-gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-gold);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-gold);
+            color: var(--primary-deep);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .leadership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-header h1 {
+                font-size: 3.8rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .mission-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 60px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+
+            .timeline-content::before {
+                display: none;
+            }
+
+            .timeline-year {
+                left: 0;
+                top: -20px;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: var(--shadow-lg);
+                border-top: 1px solid var(--neutral-light);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .page-header h1 {
+                font-size: 3rem;
+            }
+
+            .page-header p {
+                font-size: 1.2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.5rem;
+            }
+
+            .story-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-badge {
+                width: 120px;
+                height: 120px;
+                padding: 20px;
+                right: -10px;
+                bottom: -10px;
+            }
+
+            .story-badge .years {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== PREMIUM HEADER (EXACTLY FROM INDEX) ===== -->
+    <header id="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Talbert</span><span class="logo-dot"></span><span
+                    class="logo-text">Partners</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="practice-areas.html">Practice</a></li>
+                    <li><a href="attorneys.html">Attorneys</a></li>
+                    <li><a href="case-results.html">Results</a></li>
+                    <li><a href="blog.html">Insights</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html" class="nav-cta">Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== PAGE HEADER (MATCHING HERO STYLE) ===== -->
+    <section class="page-header">
+        <div class="page-header-bg">
+            <img src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=1472&auto=format&fit=crop"
+                alt="Law firm history">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="page-header-subtitle">Est. 1984</div>
+                <h1>Our Story & Legacy</h1>
+                <p>Four decades of unwavering commitment to legal excellence and client success</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STORY SECTION ===== -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="section-subtitle">Our Legacy</div>
+                    <h2>Redefining Legal Excellence Since 1984</h2>
+                    <p>Founded by James A. Talbert in a small Manhattan office, Talbert Legal Partners began with a
+                        revolutionary idea: that a law firm could combine the rigor of a white-shoe practice with the
+                        agility and innovation of a modern enterprise. Four decades later, that vision has grown into
+                        one of the nation's most respected litigation and corporate advisory firms.</p>
+                    <p>Today, we stand at the forefront of legal innovation, representing Fortune 500 companies,
+                        emerging growth businesses, and high-net-worth individuals in their most complex legal matters.
+                        Our team of 40+ attorneys brings together former federal prosecutors, SEC officials, and
+                        partners from the world's leading law firms.</p>
+                    <p>What sets us apart is our relentless commitment to strategic thinking. We don't just react to
+                        legal challenges—we anticipate them, developing proactive strategies that protect our clients'
+                        interests and advance their objectives.</p>
+
+                    <div class="story-stats">
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">Years Excellence</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-number">$3.2B</div>
+                            <div class="stat-label">Recovered</div>
+                        </div>
+                        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-number">99%</div>
+                            <div class="stat-label">Client Retention</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1170&auto=format&fit=crop"
+                        alt="Law firm office">
+                    <div class="story-badge">
+                        <span class="years">40+</span>
+                        <span class="text">Years of Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSION SECTION ===== -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-subtitle">Our Foundation</div>
+                <h2>Mission & Values</h2>
+                <p class="section-description">The principles that guide everything we do</p>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-icon"><i class="fas fa-compass"></i></div>
+                    <h3>Strategic Vision</h3>
+                    <p>We look beyond the immediate legal challenge to understand our clients' broader business
+                        objectives and long-term goals.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mission-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Uncompromising Integrity</h3>
+                    <p>Our reputation is built on absolute ethical standards, transparency, and unwavering commitment to
+                        our clients' trust.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mission-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>We embrace cutting-edge legal technology and creative approaches to deliver superior outcomes
+                        efficiently.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mission-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Client Partnership</h3>
+                    <p>We succeed only when our clients succeed, fostering deep, lasting relationships built on mutual
+                        respect and results.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mission-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Global Perspective</h3>
+                    <p>In an interconnected world, we bring international expertise and cross-border capabilities to
+                        every engagement.</p>
+                </div>
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="mission-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Excellence in Advocacy</h3>
+                    <p>We maintain the highest standards of legal craftsmanship, preparing every case and transaction
+                        with meticulous care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TIMELINE SECTION ===== -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-subtitle">Our Journey</div>
+                <h2>Historical Milestones</h2>
+                <p class="section-description">Key moments that shaped our firm's legacy</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-year">1984</div>
+                    <div class="timeline-content">
+                        <h3>Founded in Oregon</h3>
+                        <p>James Talbert opens the firm's first office on Park Avenue with a vision for innovative legal
+                            advocacy and a team of 5 attorneys.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-year">1995</div>
+                    <div class="timeline-content">
+                        <h3>First Major Victory</h3>
+                        <p>Landmark $500M settlement in complex commercial litigation establishes the firm as a
+                            powerhouse in corporate disputes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-year">2003</div>
+                    <div class="timeline-content">
+                        <h3>Expansion to Washington DC</h3>
+                        <p>Opens DC office to better serve clients navigating federal regulatory matters and government
+                            investigations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>Chambers Tier 1 Ranking</h3>
+                        <p>Recognized as a top-tier firm for Litigation and Corporate Law, cementing our reputation
+                            among the nation's elite.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="timeline-year">2018</div>
+                    <div class="timeline-content">
+                        <h3>Global Reach</h3>
+                        <p>Opens London and Hong Kong offices, establishing a truly global platform for international
+                            clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="600">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>40th Anniversary</h3>
+                        <p>Celebrating four decades of excellence with 40+ attorneys, $3.2B recovered, and recognition
+                            as a Legal Innovation Award winner.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LEADERSHIP SECTION ===== -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-subtitle">Our Team</div>
+                <h2>Executive Leadership</h2>
+                <p class="section-description">The visionaries guiding our firm's strategic direction</p>
+            </div>
+
+            <div class="leadership-grid">
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-img">
+                        <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/a/amm_mike_bio.jpg"
+                            alt="James Talbert">
+                    </div>
+                    <div class="leader-info">
+                        <h3>James A. Talbert</h3>
+                        <div class="leader-title">Founder & Chairman</div>
+                        <p>40+ years experience, Harvard Law graduate, former federal prosecutor</p>
+                    </div>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-img">
+                        <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/bio/abcde/a/aguilar_karen_bio.jpg"
+                            alt="Jennifer Talbert">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Jennifer M. Talbert</h3>
+                        <div class="leader-title">Managing Partner</div>
+                        <p>Columbia Law graduate, recognized leader in estate planning and family offices</p>
+                    </div>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-img">
+                        <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/2023/bio/abcde/a/armstrong_adam_bio.jpg"
+                            alt="Robert Williams">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Robert K. Williams</h3>
+                        <div class="leader-title">Chair, Corporate Practice</div>
+                        <p>University of Chicago Law, M&A expert, advisor to Fortune 500 boards</p>
+                    </div>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-img">
+                        <img src="https://www.torys.com/-/media/project/zenith-tenant/zenith-site/professionals/bio/abcde/a/angelus_matthew_bio.jpg"
+                            alt="Marcus Rodriguez">
+                    </div>
+                    <div class="leader-info">
+                        <h3>Marcus J. Rodriguez</h3>
+                        <div class="leader-title">Chair, Litigation</div>
+                        <p>NYU Law, former SEC enforcement attorney, top trial lawyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Partner With Our Team</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Schedule a confidential consultation with our senior partners.
+            </p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book
+                    Consultation</a>
+                <a href="attorneys.html" class="btn btn-outline"><i class="fas fa-users"></i> Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER (EXACTLY FROM INDEX) ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Talbert<span>✦</span>Partners</div>
+                    <p>Where legal excellence meets strategic innovation. Since 1984.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="practice-areas.html">Practice Areas</a></li>
+                        <li><a href="attorneys.html">Our Team</a></li>
+                        <li><a href="case-results.html">Case Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Legal Insights</a></li>
+                        <li><a href="resources.html">Downloads</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Offices</a></li>
+                        <li><a href="contact.html">Consultation</a></li>
+                        <li><a href="tel:+2128675309">(212) 867-5309</a></li>
+                        <li><a href="mailto:strategy@talbertpartners.top">Email Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Talbert Legal Partners LLP. Attorney advertising. Prior results do not guarantee similar
+                    outcomes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-toggle')?.addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('active');
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
